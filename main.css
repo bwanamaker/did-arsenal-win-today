@@ -1,0 +1,116 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer content */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.title {
+    font-size: 2.8em; /* Large font */
+    color: #c00; /* Arsenal Red */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.main-result {
+    font-size: 4.5em; /* Even larger letters */
+    font-weight: bold;
+    margin-bottom: 30px;
+    min-height: 1.2em; /* Reserve space to prevent layout shift */
+    line-height: 1.1;
+}
+
+/* Specific colors for results - can be set by JS */
+.main-result.yes {
+    color: #008000; /* Green */
+}
+.main-result.no {
+    color: #d30000; /* Darker Red */
+}
+.main-result.no-match {
+    color: #555; /* Grey */
+    font-size: 3em; /* Slightly smaller for longer text */
+}
+
+.match-details {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow: hidden; /* Ensures border-radius clips children */
+    /* display: none; /* Initially hidden, shown by JS when data is ready */
+}
+
+.match-info-header {
+    background-color: #f7f7f7;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.match-date-city {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+}
+
+.match-stadium {
+    font-size: 0.9em; /* Subheading font */
+    color: #666;
+    margin-top: 4px;
+}
+
+.score-boxes-container {
+    display: flex;
+    /* Removed justify-content: space-between; to let flex-grow work from center */
+}
+
+.score-box {
+    flex: 1; /* Equal width */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px; /* Ensure equal height, adjust as needed */
+}
+
+.score-box.team-home {
+    /* No specific border needed if they are adjacent */
+}
+
+.score-box.team-away {
+    border-left: 1px solid #e0e0e0; /* Separator line */
+}
+
+.team-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.team-score {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1c1e21;
+}
+
+/* Initially hide the match details section until data is loaded */
+#match-details-section {
+    display: none;
+}

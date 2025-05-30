@@ -5,21 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Did Arsenal Win Today?</title>
     <link rel="stylesheet" href="main.css">
-    <script defer src="dawt.js"></script>
+    <script type="module" defer src="dawt.js"></script>
 </head>
 <body>
     <div class="container">
         <h1 class="title">Did Arsenal Win Today?</h1>
-        <div class="date" id="date-field">May 22, 2025</div>
-        <div class="spacer"></div>
-        <div class="result" id="result-field">YES!</div>
-        <div class="spacer"></div>
-        <div class="score-section" id="score-section">
-            <span class="team" id="team1">Arsenal</span>
-            <span class="score" id="score1">2</span>
-            <span class="vs">vs</span>
-            <span class="team" id="team2">Chelsea</span>
-            <span class="score" id="score2">1</span>
+
+        <div class="main-result" id="main-result-text">
+            <!-- YES! / NO! / ARSENAL DIDN'T PLAY TODAY -->
+        </div>
+
+        <div class="match-details" id="match-details-section">
+            <div class="match-info-header" id="match-info-header">
+                <div class="match-date-city" id="match-date-city">
+                    <!-- Last Match: September 14, 2024 - London -->
+                </div>
+                <div class="match-stadium" id="match-stadium">
+                    <!-- Emirates Stadium -->
+                </div>
+            </div>
+            <div class="score-boxes-container">
+                <div class="score-box team-home">
+                    <span class="team-name" id="team-home-name">Arsenal</span>
+                    <span class="team-score" id="team-home-score">0</span>
+                </div>
+                <div class="score-box team-away">
+                    <span class="team-name" id="team-away-name">Opponent</span>
+                    <span class="team-score" id="team-away-score">0</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>

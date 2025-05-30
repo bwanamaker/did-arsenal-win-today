@@ -1,3 +1,6 @@
+# API key configuration
+config.js
+
 # Logs
 logs
 *.log
